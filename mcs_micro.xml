@@ -4,7 +4,7 @@
 	  <default remote="alyons" revision="master"/>
 	  
 	  <project name="musllibc.git" path="libs/libmuslc" revision="d5d5d04e4f99f9900269350e5bb0f9f9b0a27ca9" />
-	  <project name="projects_libs" path="projects/projects_libs"  revision="567e233ae72cb9bd5095d0a14ade5c823b945f99" >
+	  <project name="projects_libs" path="projects/projects_libs" remote="seL4-projects"  revision="567e233ae72cb9bd5095d0a14ade5c823b945f99" >
 	    <linkfile dest="libs/libjansson" src="libjansson"/>
 	  </project>
 	  <project name="seL4.git" path="kernel" revision="e2c6bfa4eeb0fb7c33208e6834d08f71c03f14d1" />
