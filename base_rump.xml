@@ -9,7 +9,7 @@
   <project name="musllibc" path="libs/libmuslc" revision="906f33a81f4cf488354940e749aa7c0624c7b1c3" upstream="sel4"/>
   <project name="rumprun" remote="alyons" revision="452d53d10c97b3fe71dc63621dc45ee9c8490f23" upstream="master"/>
   <project name="rumprun-packages" path="projects/rumprun-packages" remote="seL4-projects" revision="f51213438bd04cb4bcce72acf1fcd4fcca66a101" upstream="master"/>
-  <project name="rumprun-sel4-demoapps" path="projects/rumprun-sel4-demoapps" remote="seL4-projects" revision="12023008d45537e7f86624ea4fd6279f3454aee0" upstream="master">
+  <project name="rumprun-sel4-demoapps" path="projects/rumprun-sel4-demoapps" remote="alyons" revision="12023008d45537e7f86624ea4fd6279f3454aee0" upstream="master">
     <linkfile dest="Kconfig" src="Kconfig"/>
     <linkfile dest="Kbuild" src="Kbuild"/>
     <linkfile dest="Makefile" src="Makefile"/>
