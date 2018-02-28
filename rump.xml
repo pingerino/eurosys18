@@ -1,4 +1,4 @@
-	<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
 	  <remote fetch="https://github.com/esnet/" name="iperf"/>
 	  <remote fetch="https://github.com/seL4" name="seL4"/>
