@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+      <include name="common.xml" />
+	  <default remote="alyons" revision="master"/>
+	  
+	  <project name="musllibc.git" path="libs/libmuslc" revision="d5d5d04e4f99f9900269350e5bb0f9f9b0a27ca9" />
+	  <project name="projects_libs" path="projects/projects_libs"  revision="567e233ae72cb9bd5095d0a14ade5c823b945f99" >
+	    <linkfile dest="libs/libjansson" src="libjansson"/>
+	  </project>
+	  <project name="seL4.git" path="kernel" revision="e2c6bfa4eeb0fb7c33208e6834d08f71c03f14d1" />
+	  <project name="seL4_libs" path="projects/seL4_libs" revision="714fad6e95ee64ecf35bc84d141ea5f1c976c454" >
+	    <linkfile dest="libs/libsel4allocman" src="libsel4allocman"/>
+	    <linkfile dest="libs/libsel4bench" src="libsel4bench"/>
+	    <linkfile dest="libs/libsel4muslcsys" src="libsel4muslcsys"/>
+	    <linkfile dest="libs/libsel4platsupport" src="libsel4platsupport"/>
+	    <linkfile dest="libs/libsel4vka" src="libsel4vka"/>
+	    <linkfile dest="libs/libsel4vspace" src="libsel4vspace"/>
+	    <linkfile dest="libs/libsel4utils" src="libsel4utils"/>
+	    <linkfile dest="libs/libsel4simple" src="libsel4simple"/>
+	    <linkfile dest="libs/libsel4simple-default" src="libsel4simple-default"/>
+	    <linkfile dest="libs/libsel4simple-stable" src="libsel4simple-stable"/>
+	    <linkfile dest="libs/libsel4debug" src="libsel4debug"/>
+	    <linkfile dest="libs/libsel4sync" src="libsel4sync"/>
+	    <linkfile dest="libs/libsel4serialserver" src="libsel4serialserver"/>
+	    <linkfile dest="libs/libsel4test" src="libsel4test"/>
+	  </project>
+	  <project name="seL4_tools.git" path="projects/tools" revision="03a26f9031af7243e41ba82a93e5e451e239be1a" >
+	    <linkfile dest="tools/common" src="common-tool"/>
+	    <linkfile dest="tools/kbuild" src="kbuild-tool"/>
+	    <linkfile dest="tools/elfloader" src="elfloader-tool"/>
+	  </project>
+	  <project name="sel4bench.git" path="projects/sel4bench" revision="1531fe9abfd20341ea4cfa20258656677d39dd31" >
+	    <linkfile dest="Makefile" src="Makefile"/>
+	    <linkfile dest="Kbuild" src="Kbuild"/>
+	    <linkfile dest="Kconfig" src="Kconfig"/>
+	    <linkfile dest="configs" src="master-configs"/>
+	    <linkfile dest="apps" src="apps"/>
+	    <linkfile dest="libs/libsel4" src="../../kernel/libsel4"/>
+	    <linkfile dest="libs/libsel4benchsupport" src="libsel4benchsupport"/>
+	  </project>
+	  <project name="util_libs" path="projects/util_libs" revision="88119c8c2a52082d5c809e828fda45162245e7fb" >
+	    <linkfile dest="libs/libcpio" src="libcpio"/>
+	    <linkfile dest="libs/libelf" src="libelf"/>
+	    <linkfile dest="libs/libplatsupport" src="libplatsupport"/>
+	    <linkfile dest="libs/libutils" src="libutils"/>
+	  </project>
+	</manifest>

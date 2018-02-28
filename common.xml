@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	  <remote fetch="https://github.com/seL4/" name="seL4"/>
+	  <remote fetch="https://github.com/SEL4PROJ/" name="seL4-projects"/>
+      <remote fetch="https://github.com/pingerino/" name="alyons" /> 
+	  <remote fetch="https://github.com/esnet/" name="iperf"/>
+</manifest>

@@ -1,0 +1,71 @@
+	<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+      <include name="common.xml" />
+	  <default remote="seL4" revision="master"/>
+	  
+	  <project name="iperf" path="projects/iperf" remote="iperf" revision="274eaed5b17f664e4ac6c79f1ba854b55f15a3a3" upstream="refs/tags/3.1.3"/>
+	  <project name="leveldb" path="projects/leveldb" remote="seL4-projects" revision="90894f76537ca8a74c7761f2dd3a34341ba90007" upstream="sel4"/>
+	  <project name="musllibc" path="projects/musllibc" revision="d5d5d04e4f99f9900269350e5bb0f9f9b0a27ca9" upstream="sel4">
+	    <linkfile dest="libs/libmuslc" src="."/>
+	  </project>
+	  <project name="projects_libs" path="projects/projects_libs" remote="seL4-projects" revision="567e233ae72cb9bd5095d0a14ade5c823b945f99" upstream="master">
+	    <linkfile dest="libs/libjansson" src="libjansson"/>
+	  </project>
+	  <project name="rumprun" path="projects/rumprun" remote="alyons" revision="9a88de783f13428564835367fc2a81448c917962" >
+	    <linkfile dest="libs/rumprun" src="."/>
+	  </project>
+	  <project name="rumprun-packages" path="projects/rumprun-packages" remote="alyons" revision="36be2a5ca20e6cb25b22fd1230159c5aad96da83" />
+	  <project name="rumprun-sel4-demoapps" path="projects/rumprun-sel4-demoapps" remote="alyons" revision="7b083d284802ef7a0c51869d7e4126b88a593789" >
+	    <linkfile dest="Kconfig" src="Kconfig"/>
+	    <linkfile dest="Kbuild" src="Kbuild"/>
+	    <linkfile dest="Makefile" src="Makefile"/>
+	    <linkfile dest="configs" src="configs"/>
+	    <linkfile dest="apps/roottask" src="roottask"/>
+	    <linkfile dest="README.md" src="README.md"/>
+	    <linkfile dest="apps/cjpeg" src="userapps/cjpeg"/>
+	    <linkfile dest="apps/djpeg" src="userapps/djpeg"/>
+	    <linkfile dest="apps/erlang" src="userapps/erlang"/>
+	    <linkfile dest="apps/hello" src="userapps/hello"/>
+	    <linkfile dest="apps/iperf3" src="userapps/iperf3"/>
+	    <linkfile dest="apps/leveldb" src="userapps/leveldb"/>
+	    <linkfile dest="apps/madplay" src="userapps/madplay"/>
+	    <linkfile dest="apps/memcached" src="userapps/memcached"/>
+	    <linkfile dest="apps/multicore_pthread" src="userapps/multicore_pthread"/>
+	    <linkfile dest="apps/netserver" src="userapps/netserver"/>
+	    <linkfile dest="apps/nginx" src="userapps/nginx"/>
+	    <linkfile dest="apps/python" src="userapps/python"/>
+	    <linkfile dest="apps/redis" src="userapps/redis"/>
+	    <linkfile dest="apps/rust" src="userapps/rust"/>
+	    <linkfile dest="apps/susan" src="userapps/susan"/>
+	  </project>
+	  <project name="seL4" path="kernel" remote="alyons" revision="e2c6bfa4eeb0fb7c33208e6834d08f71c03f14d1" >
+	    <linkfile dest="libs/libsel4" src="libsel4"/>
+	  </project>
+	  <project name="seL4_libs" path="projects/seL4_libs" remote="alyons" revision="714fad6e95ee64ecf35bc84d141ea5f1c976c454" >
+	    <linkfile dest="libs/libsel4muslcsys" src="libsel4muslcsys"/>
+	    <linkfile dest="libs/libsel4platsupport" src="libsel4platsupport"/>
+	    <linkfile dest="libs/libsel4utils" src="libsel4utils"/>
+	    <linkfile dest="libs/libsel4serialserver" src="libsel4serialserver"/>
+	    <linkfile dest="libs/libsel4test" src="libsel4test"/>
+	    <linkfile dest="libs/libsel4sync" src="libsel4sync"/>
+	    <linkfile dest="libs/libsel4vspace" src="libsel4vspace"/>
+	    <linkfile dest="libs/libsel4vka" src="libsel4vka"/>
+	    <linkfile dest="libs/libsel4debug" src="libsel4debug"/>
+	    <linkfile dest="libs/libsel4simple" src="libsel4simple"/>
+	    <linkfile dest="libs/libsel4simple-default" src="libsel4simple-default"/>
+	    <linkfile dest="libs/libsel4bench" src="libsel4bench"/>
+	    <linkfile dest="libs/libsel4allocman" src="libsel4allocman"/>
+	  </project>
+	  <project name="seL4_tools" path="projects/seL4_tools" revision="03a26f9031af7243e41ba82a93e5e451e239be1a" upstream="master">
+	    <linkfile dest="tools/common" src="common-tool"/>
+	    <linkfile dest="tools/elfloader" src="elfloader-tool"/>
+	    <linkfile dest="tools/kbuild" src="kbuild-tool"/>
+	  </project>
+	  <project name="util_libs" path="projects/util_libs" revision="88119c8c2a52082d5c809e828fda45162245e7fb" upstream="master">
+	    <linkfile dest="libs/libplatsupport" src="libplatsupport"/>
+	    <linkfile dest="libs/libcpio" src="libcpio"/>
+	    <linkfile dest="libs/libelf" src="libelf"/>
+	    <linkfile dest="libs/libutils" src="libutils"/>
+	    <linkfile dest="libs/libethdrivers" src="libethdrivers"/>
+	  </project>
+	</manifest>
