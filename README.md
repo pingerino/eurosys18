@@ -3,7 +3,7 @@ EuroSys 2018 Benchmarks
 
 This repo contains manifests for all of the benchmarks run for the EuroSys 2018 paper
 "Scheduling-Context Capabilities: A Principled, Light-Weight OS Mechanism for
-Managing Time". 
+Managing Time".
 
 Manifests
 ---------
@@ -18,8 +18,9 @@ Table 1            | MCS        | mcs_micro.xml  | x64      | x64_release_O2_def
 Table 1            | Baseline   | base_micro.xml | ARM      | sabre_release_O2_defconfig          |
 Table 1            | Baseline   | base_micro.xml | x64      | x64_release_O2_defconfig            |
 Figure 6           | MCS        | vm_ipbench.xml | x64      | x64_optiplex9020_udpecho_defconfig  |
-Table 2            | Baseline   | base_rump.xml  | x64      | notrt-redis-rumprun-x86_64_defconfig|*
-Table 2            | BMK        | rump.xml       | x64      | make hw_redis_x64                   |*
+Table 2            | Baseline   | base_rump.xml  | x64      | notrt-redis-rumprun-x86_64_defconfig|
+Table 2            | BMK        | rump.xml       | x64      | make hw_redis_x64                   |
+Table 2            | MCS        | mcs_rump.xml   | x64      | rt-msi-redis-rumprun-x86_64_defconfig   |
 Figure 7/Table 2   | MCS        | mcs_rump.xml   | x64      | rt-redis-rumprun-x86_64_defconfig   |
 Table 3/Figure 8   | MCS        | mcs_micro.xml  | ARM      | sabre_aes_defconfig                 |
 Table 3/Figure 8   | MCS        | mcs_micro.xml  | x64      | x64_aes_defconfig                   |
@@ -35,10 +36,29 @@ Figure 11          | MCS        | mcs_micro.xml  | x64      | x64_ulscheduler_de
 
     repo init -u https://github.com/pingerino/eurosys18.git -m <MANIFEST>.xml
 
+### Docker snapshot with build dependencies at time of benchmarks
+
+```
+docker run -it --hostname in-container --rm -v $PWD:/host -w /host trustworthysystems/camkes:2017_10_05 bash
+apt-get update
+apt-get install rsync # we missed one.
+
+```
+
 ### Building the code
+
+#### seL4
 
     make <CONFIG>
     make -j
+
+seL4 images can be found in the ./images folder.
+
+#### BMK
+
+    make hw_redis_x64
+
+The BMK image can be found: `build2/bmk/redis/redis.bin`
 
 ### Running the code
 
