@@ -40,9 +40,11 @@ Figure 11          | MCS        | mcs_micro.xml  | x64      | x64_ulscheduler_de
 
 ```
 docker run -it --hostname in-container --rm -v $PWD:/host -w /host trustworthysystems/camkes:2017_10_05 bash
+# And then inside the container.
 apt-get update
 apt-get install rsync # we missed one.
-
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 ```
 
 ### Building the code
@@ -54,11 +56,22 @@ apt-get install rsync # we missed one.
 
 seL4 images can be found in the ./images folder.
 
+#### seL4 rump
+
+    source ./scripts/init-all.sh
+    make <CONFIG>
+    # Run only this following command in docker.
+    make -j
+
+
 #### BMK
 
     make hw_redis_x64
 
 The BMK image can be found: `build2/bmk/redis/redis.bin`
+
+Depending on the hardware used, different interrupt numbers may be required than what is initialiased.  See [here](https://www.mail-archive.com/rumpkernel-users@freelists.org/msg01575.html) or ask on our mailing list if you have this problem.
+
 
 ### Running the code
 
